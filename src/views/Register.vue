@@ -16,6 +16,7 @@
     </div>
 </template>
 
+
 <script>
 export default {
     data() {
@@ -31,23 +32,15 @@ export default {
         register() {
             if (this.registerData.username && this.registerData.password) {
                 console.log('Registering...');
-                // 在这里可以将注册信息提交给后端进行注册
-                // 例如使用 axios 发送 POST 请求
-                // axios.post('/api/register', this.registerData)
-                //   .then(response => {
-                //     console.log('Registration successful!');
-                //     // 可以根据后端返回的数据进行相应的处理
-                //   })
-                //   .catch(error => {
-                //     console.error('Registration failed:', error);
-                //     this.errorMessage = 'Registration failed. Please try again later.';
-                //   });
+                // 模拟注册成功后的操作
+                this.$router.push('/login');
             } else {
                 this.errorMessage = 'Please enter both username and password.';
             }
         }
     }
 };
+
 </script>
 
 <style scoped>

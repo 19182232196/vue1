@@ -1,4 +1,3 @@
-// router/index.js
 import { createRouter, createWebHistory } from 'vue-router';
 import Dashboard from '@/views/Dashboard.vue';
 import Profile from '@/views/Profile.vue';
@@ -9,8 +8,15 @@ import ShoppingCart from '@/views/ShoppingCart.vue';
 import VideoWebsite from '@/views/VideoWebsite.vue';
 import Anime from '@/views/Anime.vue';
 import About from '@/views/About.vue';
+import Music from '@/views/Music.vue';
+import Home from '@/views/Home.vue'; // 确保你有这个组件
 
 const routes = [
+    {
+        path: '/',
+        name: 'Home',
+        component: Home
+    },
     {
         path: '/login',
         name: 'Login',
@@ -32,9 +38,9 @@ const routes = [
         component: Profile
     },
     {
-        path: '/student-management/:teacherId', // 添加 StudentManagement 的路由路径，并使用动态参数 teacherId
+        path: '/student-management/:teacherId',
         name: 'StudentManagement',
-        component: StudentManagement // 关联 StudentManagement 组件
+        component: StudentManagement
     },
     {
         path: '/shopping',
@@ -55,6 +61,11 @@ const routes = [
         path: '/about',
         name: 'About',
         component: About
+    },
+    {
+        path: '/music',
+        name: 'Music',
+        component: Music
     }
 ];
 

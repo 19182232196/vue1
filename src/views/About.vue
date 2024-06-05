@@ -25,12 +25,14 @@
         </ul>
 
         <button class="back-to-top" @click="scrollToTop">返回顶部</button>
-
-        <!-- 其他内容 -->
+        <div>
+            <WelcomeItem></WelcomeItem>
+        </div>
     </div>
 </template>
 
 <script>
+import WelcomeItem from '@/components/WelcomeItem.vue';
 export default {
     name: 'About',
     methods: {
@@ -40,6 +42,9 @@ export default {
                 behavior: 'smooth' // 平滑滚动效果
             });
         }
+    },
+    components: {
+        WelcomeItem
     }
 };
 </script>
